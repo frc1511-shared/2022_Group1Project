@@ -2,6 +2,8 @@
 
 #include <Drive.h>
 #include <Mechanism.h>
+#include <frc/GenericHID.h>
+
 
 class Controls : public Mechanism {
 public:
@@ -16,4 +18,5 @@ private:
     Drive* drive;
 
     // Variables here!
+    frc::GenericHID gameController { 0 };
 };
