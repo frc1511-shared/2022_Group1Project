@@ -1,6 +1,8 @@
 #pragma once
 
 #include <frc/TimedRobot.h>
+#include <Controls.h>
+#include <Drive.h>
 
 class Robot : public frc::TimedRobot {
 public:
@@ -16,4 +18,8 @@ public:
     void TestPeriodic() override;
 
 private:
+    Drive drive;
+    Controls controls { &drive };
+
+    // Mechanism variables go here!
 };
