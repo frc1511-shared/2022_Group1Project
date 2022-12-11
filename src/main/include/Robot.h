@@ -22,9 +22,10 @@ public:
 
 private:
     Drive drive;
-    Controls controls { &drive };
 
     HatchPanel hatchPanel;
     Cargo cargo;
     GamePiece gamePiece { &cargo, &hatchPanel };
+    Controls controls { &drive, &gamePiece };
+
 };

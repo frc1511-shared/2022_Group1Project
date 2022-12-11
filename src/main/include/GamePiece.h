@@ -14,8 +14,16 @@ public:
     void resetToMode(MatchMode mode) override;
     void sendFeedback() override;
 
+    void SetCargoMode(Cargo::CargoDir);
+
 private:
     Cargo* cargo;
     HatchPanel* hatchPanel;
-
+    enum class GrabbyChooser{
+        CARGO,
+        HATCH_PANEL,
+        IDLE
+    };
+    GrabbyChooser grabbyChooser = GrabbyChooser::IDLE;
+    Cargo::CargoDir cargoDir = Cargo::CargoDir::NOTTAKE;
 };

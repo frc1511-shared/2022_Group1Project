@@ -1,6 +1,8 @@
 #pragma once
 
 #include <Mechanism.h>
+#include <ctre/Phoenix.h>
+
 
 class Cargo : public Mechanism {
 public:
@@ -22,5 +24,6 @@ public:
 
 private:
     CargoDir cargoDir;
-
+    ctre::phoenix::motorcontrol::can::TalonSRX LeftCargo { 2 };
+    ctre::phoenix::motorcontrol::can::TalonSRX RightCargo { 3 };
 };
