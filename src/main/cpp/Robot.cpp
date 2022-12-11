@@ -15,6 +15,9 @@ void Robot::TeleopInit() { }
 void Robot::TeleopPeriodic() {
     controls.process();
     drive.process();
+    hatchPanel.process();
+    cargo.process();
+    gamePiece.process();
 }
 
 void Robot::DisabledInit() { }

@@ -3,6 +3,9 @@
 #include <frc/TimedRobot.h>
 #include <Controls.h>
 #include <Drive.h>
+#include <Cargo.h>
+#include <HatchPanel.h>
+#include <GamePiece.h>
 
 class Robot : public frc::TimedRobot {
 public:
@@ -21,5 +24,7 @@ private:
     Drive drive;
     Controls controls { &drive };
 
-    // Mechanism variables go here!
+    HatchPanel hatchPanel;
+    Cargo cargo;
+    GamePiece gamePiece { &cargo, &hatchPanel };
 };
