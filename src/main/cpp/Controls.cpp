@@ -11,8 +11,8 @@ Controls::~Controls() {
 
 
 void Controls::process() {
-    double joystickLeft = gameController.GetRawAxis(0);
-    double joystickRight = gameController.GetRawAxis(0);
+    double joystickLeft = -gameController.GetRawAxis(1);
+    double joystickRight = -gameController.GetRawAxis(5);
     drive->tankDrive(joystickLeft, joystickRight);
 }
 
