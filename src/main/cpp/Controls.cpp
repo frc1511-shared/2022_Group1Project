@@ -15,8 +15,14 @@ void Controls::process() {
     double joystickRight = -gameController.GetRawAxis(5);
     drive->tankDrive(joystickLeft, joystickRight);
 
-    if (gameController.GetRawButton(4)){
+    if (gameController.GetRawAxis(2)>0.1){
         gamepiece -> SetCargoMode(Cargo::CargoDir::INTAKE);
+    }
+    else if (gameController.GetRawButton(5)){
+        gamepiece -> SetCargoMode(Cargo::CargoDir::OUTTAKE);
+    }
+    else{
+        gamepiece -> SetCargoMode(Cargo::CargoDir::NOTTAKE);
     }
 }
 

@@ -26,6 +26,6 @@ void Drive::sendFeedback() {
 
 void Drive::tankDrive(double left, double right) {
     // Tank drive stuff here!
-    LeftPercentage = left;
-    RightPercentage = right;
+    LeftPercentage = left*.5;
+    RightPercentage = right*.5;
 }

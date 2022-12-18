@@ -14,10 +14,13 @@ void GamePiece::process() {
     if (grabbyChooser == GrabbyChooser::CARGO){
         cargo -> setCargoDir(cargoDir);
     }
+    else if (grabbyChooser == GrabbyChooser::IDLE){
+        cargo -> setCargoDir(Cargo::CargoDir::NOTTAKE);
+    }
 }
 
 void GamePiece::resetToMode(MatchMode mode) {
-
+    cargoDir = Cargo::CargoDir::NOTTAKE;
 }
 
 void GamePiece::sendFeedback() {

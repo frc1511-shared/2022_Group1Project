@@ -28,4 +28,5 @@ private:
     GamePiece gamePiece { &cargo, &hatchPanel };
     Controls controls { &drive, &gamePiece };
 
+    void Reset(Mechanism::MatchMode);
 };
